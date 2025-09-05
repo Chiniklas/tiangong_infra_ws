@@ -1,0 +1,32 @@
+<launch>
+  <!-- Namespace of the hand/arm -->
+  <arg name="ns" default="swivel"/>
+
+  <!-- Individual target positions for six DOFs (Float64, typical range [0.0, 0.01]) -->
+  <arg name="pos1" default="0.005"/>
+  <arg name="pos2" default="0.005"/>
+  <arg name="pos3" default="0.005"/>
+  <arg name="pos4" default="0.005"/>
+  <arg name="pos5" default="0.005"/>
+  <arg name="pos6" default="0.005"/>
+
+  <!-- Publish once (-1) to each controller command topic -->
+  <node pkg="rostopic" type="rostopic" name="swivelj1_pub"
+        args="pub -1 /$(arg ns)/swiveljoint1_position_controller/command std_msgs/Float64 -- $(arg pos1)"
+        output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="swivelj2_pub"
+        args="pub -1 /$(arg ns)/swiveljoint2_position_controller/command std_msgs/Float64 -- $(arg pos2)"
+        output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="swivelj3_pub"
+        args="pub -1 /$(arg ns)/swiveljoint3_position_controller/command std_msgs/Float64 -- $(arg pos3)"
+        output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="swivelj4_pub"
+        args="pub -1 /$(arg ns)/swiveljoint4_position_controller/command std_msgs/Float64 -- $(arg pos4)"
+        output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="swivelj5_pub"
+        args="pub -1 /$(arg ns)/swiveljoint5_position_controller/command std_msgs/Float64 -- $(arg pos5)"
+        output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="swivelj6_pub"
+        args="pub -1 /$(arg ns)/swiveljoint6_position_controller/command std_msgs/Float64 -- $(arg pos6)"
+        output="screen"/>
+</launch>
