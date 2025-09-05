@@ -1,6 +1,7 @@
 Instructions:
 
 To build the docker image: currently Ubuntu16.04 + ROS kinetic:
+
 step1:
   go to ./scripts, run **build.bash**
 
