@@ -1,27 +1,31 @@
-# For CUDA + OpenGL GUI support
-FROM osrf/ros:noetic-desktop-full
-# OR for headless only: FROM nvidia/cuda:11.8.0-devel-ubuntu20.04
+# Dockerfile (Kinetic)
+FROM osrf/ros:kinetic-desktop-full
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# ROS Noetic setup
-RUN apt-get update && apt-get install -y curl gnupg2 lsb-release
-RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros1-latest.list' \
- && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add -
-RUN apt-get update && apt-get install -y \
-    ros-noetic-desktop-full \
-    python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool \
-    build-essential git cmake python3-pip \
-    ros-noetic-moveit ros-noetic-ros-control ros-noetic-ros-controllers \
-    ros-noetic-robot-state-publisher ros-noetic-joint-state-publisher-gui \
-    ros-noetic-diagnostics ros-noetic-rqt ros-noetic-rqt-common-plugins \
-    mesa-utils libgl1 libglfw3 libxkbcommon0 libxi6 libxinerama1 libxcursor1 libxxf86vm1 libxrandr2 \
+# Core tooling (note: Kinetic is Python2-first, but we can add Python3 alongside if needed)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    sudo git curl wget vim nano bash-completion build-essential cmake \
+    python-pip python-setuptools \
+    python-catkin-tools \
+    # GUI / OpenGL for RViz
+    mesa-utils libgl1 libglfw3 \
+    libxrandr2 libxinerama1 libxcursor1 libxi6 libxxf86vm1 libxkbcommon0 \
+    # MoveIt + control (Kinetic)
+    ros-kinetic-moveit \
+    ros-kinetic-ros-control ros-kinetic-ros-controllers \
+    ros-kinetic-robot-state-publisher ros-kinetic-joint-state-publisher-gui \
+    ros-kinetic-diagnostic-updater ros-kinetic-diagnostics \
+    ros-kinetic-serial \
  && rm -rf /var/lib/apt/lists/*
 
-# Python deps (incl. MuJoCo)
-RUN pip3 install --no-cache-dir mujoco==3.1.6 numpy scipy matplotlib pandas pyyaml transforms3d ipython ipdb
+# (Optional) Add Python3 if you really need it for tools (NOT for rospy in Kinetic)
+# RUN apt-get update && apt-get install -y python3 python3-pip && rm -rf /var/lib/apt/lists/*
 
-# at the end of your Dockerfile
-RUN echo 'export ROS_HOSTNAME=localhost' >> /root/.bashrc && \
-    echo 'export ROS_MASTER_URI=http://localhost:11311' >> /root/.bashrc
+# Quality of life: source ROS
+RUN echo "source /opt/ros/kinetic/setup.bash" >> /root/.bashrc
+WORKDIR /tiangong_infra_ws
+
+CMD ["/bin/bash"]
+
 

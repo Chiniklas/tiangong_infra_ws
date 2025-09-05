@@ -1,14 +1,14 @@
 services:
   tiangong:
-    image: tiangong_infra_ws:noetic
+    image: tiangong_infra_ws:kinetic
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: tiangong_noetic
-    hostname: tiangong_noetic
+    container_name: tiangong_kinetic
+    hostname: tiangong_kinetic
     working_dir: /tiangong_infra_ws
     volumes:
-      - ./ws:/tiangong_infra_ws            # <— mount host ./ws into /tiangong_infra_ws
+      - ./ws:/tiangong_infra_ws
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     environment:
       - DISPLAY=${DISPLAY}
