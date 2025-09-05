@@ -20,3 +20,10 @@
 	1.本urdf文件仅能被gazebo正确读取，在其他平台打开将丢失并联结构（包括Rviz）。
 	2.进行gazebo仿真时，建议在左侧Physics菜单中关闭重力，重力会严重影响模型运动。
 	3.除大拇指外，其余四指仅有一个主动关节（驱动器），其他均为从动关节；大拇指包括两个驱动器，对应两个主动关节。
+
+5- for a simple one-line controller launch, you can do this:
+
+roslaunch handleft9183 swivel_controller.launch pos1:=0.008 pos2:=0.008 pos3:=0.008 pos4:=0.001 pos5:=0.001 pos6:=0.003
+
+it will autumatically run the rostopic pub job that is mentioned in point3.
+
