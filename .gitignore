@@ -1,0 +1,24 @@
+# Ignore build outputs
+ws/build/
+ws/devel/
+ws/logs/
+**/.catkin_tools
+
+# ROS log files
+*.log
+*.bag
+*.bag.active
+*.bag.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor/IDE stuff
+.vscode/
+.idea/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
