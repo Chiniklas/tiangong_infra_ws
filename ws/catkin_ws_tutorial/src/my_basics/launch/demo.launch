@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="my_basics" type="publisher.py" name="publisher" output="screen"/>
+  <node pkg="my_basics" type="subscriber.py" name="listener" output="screen"/>
+  <node pkg="my_basics" type="Person_pub.py" name="person" output="screen"/>
+
+</launch>

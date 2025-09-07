@@ -1,25 +1,31 @@
-# Noetic on 20.04 with RViz/MoveIt and OpenGL userspace
-FROM osrf/ros:noetic-desktop-full
+# Dockerfile (Kinetic)
+FROM osrf/ros:kinetic-desktop-full
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Core build + ROS tooling + GUI/OpenGL libs
+# Core tooling (note: Kinetic is Python2-first, but we can add Python3 alongside if needed)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3-rosdep python3-catkin-tools build-essential cmake git \
-    ros-noetic-moveit \
-    ros-noetic-ros-control ros-noetic-ros-controllers \
-    ros-noetic-robot-state-publisher ros-noetic-joint-state-publisher-gui \
-    ros-noetic-diagnostic-updater ros-noetic-diagnostics \
-    mesa-utils libgl1-mesa-dri libglu1-mesa libglfw3 libxkbcommon0 \
+    sudo git curl wget vim nano bash-completion build-essential cmake \
+    python-pip python-setuptools \
+    python-catkin-tools \
+    # GUI / OpenGL for RViz
+    mesa-utils libgl1 libglfw3 \
+    libxrandr2 libxinerama1 libxcursor1 libxi6 libxxf86vm1 libxkbcommon0 \
+    # MoveIt + control (Kinetic)
+    ros-kinetic-moveit \
+    ros-kinetic-ros-control ros-kinetic-ros-controllers \
+    ros-kinetic-robot-state-publisher ros-kinetic-joint-state-publisher-gui \
+    ros-kinetic-diagnostic-updater ros-kinetic-diagnostics \
+    ros-kinetic-serial \
  && rm -rf /var/lib/apt/lists/*
 
-# (Optional) MuJoCo & analysis stack; comment out if not needed
-# RUN pip3 install --no-cache-dir mujoco==3.1.6 numpy scipy matplotlib pandas pyyaml transforms3d
+# (Optional) Add Python3 if you really need it for tools (NOT for rospy in Kinetic)
+# RUN apt-get update && apt-get install -y python3 python3-pip && rm -rf /var/lib/apt/lists/*
 
-# Convenience: source ROS and (if present) the workspace overlay
-RUN echo 'source /opt/ros/noetic/setup.bash' >> /root/.bashrc && \
-    echo 'if [ -f /tiangong_infra_ws/devel/setup.bash ]; then source /tiangong_infra_ws/devel/setup.bash; fi' >> /root/.bashrc
-
+# Quality of life: source ROS
+RUN echo "source /opt/ros/kinetic/setup.bash" >> /root/.bashrc
 WORKDIR /tiangong_infra_ws
+
 CMD ["/bin/bash"]
+
 
