@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /tiangong_infra_ws/ws/catkin_ws_tutorial/install/setup.sh

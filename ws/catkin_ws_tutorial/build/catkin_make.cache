@@ -1,0 +1,2 @@
+my_basics
+-DCATKIN_DEVEL_PREFIX=/tiangong_infra_ws/ws/catkin_ws_tutorial/devel -DCMAKE_INSTALL_PREFIX=/tiangong_infra_ws/ws/catkin_ws_tutorial/install -G Unix Makefiles
