@@ -1,0 +1,23 @@
+<launch>
+  <!-- Side: left_hand | right_hand -->
+  <arg name="hand"       default="left_hand"/>
+
+  <!-- Finger names (comma-separated) -->
+  <arg name="names"      default="fore,thumb_bend"/>
+
+  <!-- Positions in PERCENT (e.g., 80,40). Use 0.8,0.4 if your driver expects [0–1]. -->
+  <arg name="positions"  default="80,40"/>
+
+  <!-- Optional speed/force in PERCENT; leave empty to skip -->
+  <arg name="speed"      default=""/>
+  <arg name="force"      default=""/>
+
+  <node pkg="hand_test_pkg" type="hand_angle_test.py" name="hand_angle_test" output="screen">
+    <param name="hand"      value="$(arg hand)"/>
+    <param name="names"     value="$(arg names)"/>
+    <param name="positions" value="$(arg positions)"/>
+    <param name="speed"     value="$(arg speed)"/>
+    <param name="force"     value="$(arg force)"/>
+  </node>
+</launch>
+
