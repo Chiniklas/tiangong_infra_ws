@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="humanoid">
+
+  <!-- 禁用骨盆与相邻连杆的碰撞检测 -->
+  <disable_collisions link1="pelvis" link2="waist_yaw_link"/>
+  <disable_collisions link1="pelvis" link2="hip_roll_l_link"/>
+  <disable_collisions link1="pelvis" link2="hip_roll_r_link"/>
+
+  <!-- 禁用头部相关连杆的碰撞检测 -->
+  <disable_collisions link1="waist_yaw_link" link2="head_yaw_link"/>
+  <disable_collisions link1="head_yaw_link" link2="head_pitch_link"/>
+  <disable_collisions link1="head_pitch_link" link2="head_roll_link"/>
+
+  <!-- 禁用左腿相关连杆的碰撞检测 -->
+  <disable_collisions link1="hip_roll_l_link" link2="hip_pitch_l_link"/>
+  <disable_collisions link1="hip_pitch_l_link" link2="hip_yaw_l_link"/>
+  <disable_collisions link1="hip_yaw_l_link" link2="knee_pitch_l_link"/>
+  <disable_collisions link1="knee_pitch_l_link" link2="ankle_pitch_l_link"/>
+  <disable_collisions link1="ankle_pitch_l_link" link2="ankle_roll_l_link"/>
+
+  <!-- 禁用右腿相关连杆的碰撞检测 -->
+  <disable_collisions link1="hip_roll_r_link" link2="hip_pitch_r_link"/>
+  <disable_collisions link1="hip_pitch_r_link" link2="hip_yaw_r_link"/>
+  <disable_collisions link1="hip_yaw_r_link" link2="knee_pitch_r_link"/>
+  <disable_collisions link1="knee_pitch_r_link" link2="ankle_pitch_r_link"/>
+  <disable_collisions link1="ankle_pitch_r_link" link2="ankle_roll_r_link"/>
+
+  <!-- 禁用左臂相关连杆的碰撞检测 -->
+  <disable_collisions link1="waist_yaw_link" link2="shoulder_pitch_l_link"/>
+  <disable_collisions link1="shoulder_pitch_l_link" link2="shoulder_roll_l_link"/>
+  <disable_collisions link1="shoulder_roll_l_link" link2="shoulder_yaw_l_link"/>
+  <disable_collisions link1="shoulder_yaw_l_link" link2="elbow_pitch_l_link"/>
+  <disable_collisions link1="elbow_pitch_l_link" link2="elbow_yaw_l_link"/>
+  <disable_collisions link1="elbow_yaw_l_link" link2="wrist_pitch_l_link"/>
+  <disable_collisions link1="wrist_pitch_l_link" link2="wrist_roll_l_link"/>
+
+  <!-- 禁用右臂相关连杆的碰撞检测 -->
+  <disable_collisions link1="waist_yaw_link" link2="shoulder_pitch_r_link"/>
+  <disable_collisions link1="shoulder_pitch_r_link" link2="shoulder_roll_r_link"/>
+  <disable_collisions link1="shoulder_roll_r_link" link2="shoulder_yaw_r_link"/>
+  <disable_collisions link1="shoulder_yaw_r_link" link2="elbow_pitch_r_link"/>
+  <disable_collisions link1="elbow_pitch_r_link" link2="elbow_yaw_r_link"/>
+  <disable_collisions link1="elbow_yaw_r_link" link2="wrist_pitch_r_link"/>
+  <disable_collisions link1="wrist_pitch_r_link" link2="wrist_roll_r_link"/>
+
+  <!-- 禁用明显不会碰撞的连杆对 -->
+  <disable_collisions link1="head_roll_link" link2="shoulder_pitch_l_link"/>
+  <disable_collisions link1="head_roll_link" link2="shoulder_pitch_r_link"/>
+  <disable_collisions link1="shoulder_pitch_l_link" link2="shoulder_pitch_r_link"/>
+  <disable_collisions link1="elbow_pitch_l_link" link2="elbow_pitch_r_link"/>
+  <disable_collisions link1="wrist_pitch_l_link" link2="wrist_pitch_r_link"/>
+  <disable_collisions link1="ankle_roll_l_link" link2="ankle_roll_r_link"/>
+  <disable_collisions link1="hip_yaw_l_link" link2="hip_yaw_r_link"/>
+  <disable_collisions link1="knee_pitch_l_link" link2="knee_pitch_r_link"/>
+
+  <!-- 禁用左右腿之间不太可能碰撞的连杆 -->
+  <disable_collisions link1="hip_pitch_l_link" link2="hip_pitch_r_link"/>
+  <disable_collisions link1="hip_roll_l_link" link2="hip_roll_r_link"/>
+
+  <!-- 禁用手臂和腿之间不太可能碰撞的连杆 -->
+  <disable_collisions link1="shoulder_pitch_l_link" link2="hip_roll_l_link"/>
+  <disable_collisions link1="shoulder_pitch_r_link" link2="hip_roll_r_link"/>
+  <disable_collisions link1="elbow_pitch_l_link" link2="knee_pitch_l_link"/>
+  <disable_collisions link1="elbow_pitch_r_link" link2="knee_pitch_r_link"/>
+
+  <!-- 禁用头部和腿部之间不太可能碰撞的连杆 -->
+  <disable_collisions link1="head_roll_link" link2="hip_pitch_l_link"/>
+  <disable_collisions link1="head_roll_link" link2="hip_pitch_r_link"/>
+  <disable_collisions link1="head_roll_link" link2="knee_pitch_l_link"/>
+  <disable_collisions link1="head_roll_link" link2="knee_pitch_r_link"/>
+
+</robot>

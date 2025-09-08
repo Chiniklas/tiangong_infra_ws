@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /tiangong_infra_ws/ws/tg2_ws/install/setup.sh
