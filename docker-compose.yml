@@ -16,5 +16,5 @@ services:
       - ROS_HOSTNAME=localhost
       - ROS_MASTER_URI=http://localhost:11311
     network_mode: host
-    gpus: "all"
+    
 
