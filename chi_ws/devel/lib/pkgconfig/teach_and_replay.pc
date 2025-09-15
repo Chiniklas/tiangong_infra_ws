@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/chi_ws/devel
+
+Name: teach_and_replay
+Description: Description of teach_and_replay
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

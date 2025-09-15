@@ -1,0 +1,13 @@
+<launch>
+    <arg name = "side" default="left_hand"/>
+    <arg name = "ratio" default="0.8"/>
+    <arg name = "weights" default="[1,1,1,1,1,1]"/>
+    <arg name = "names" default="['1','2','3','4','5','6']"/>
+    <node pkg="hand_control" type="hand_opener.py" name="hand_open_service_client" output="screen">
+        <param name="hand_side" value="$(arg side)"/>
+        <param name="ratio" value="$(arg ratio)"/>
+        <param name="weights" value="$(arg weights)"/>
+        <param name="names" value="$(arg names)"/>
+    </node>
+
+</launch>

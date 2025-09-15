@@ -1,0 +1,2 @@
+hand_control:teach_and_replay
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/chi_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/chi_ws/install -G Unix Makefiles

@@ -1,0 +1,20 @@
+<launch>
+  <!-- path to the bag with /head/status -->
+  <arg name="bag" default=""/>
+
+  <!-- gains for tracking; tune as needed -->
+  <arg name="kp"  default="5.0"/>
+  <arg name="kd"  default="0.2"/>
+
+  <!-- converter: /head/status -> /head/cmd_ctrl -->
+  <node pkg="teach_and_replay" type="replay_head_from_status.py"
+        name="replay_head_from_status" output="screen">
+    <param name="kp" value="$(arg kp)"/>
+    <param name="kd" value="$(arg kd)"/>
+  </node>
+
+  <!-- rosbag player (keeps original timing) -->
+  <node pkg="rosbag" type="play" name="play_bag"
+        args="--clock $(arg bag)"/>
+</launch>
+

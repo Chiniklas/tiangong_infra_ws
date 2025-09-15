@@ -1,0 +1,12 @@
+<launch>
+  <arg name="side"    default="left_hand"/>   <!-- add this -->
+  <arg name="ratio"   default="1.0"/>
+  <arg name="fingers" default="1 2 3 4 5 6"/>
+
+  <node pkg="hand_control"
+        type="multi_finger_control.sh"
+        name="multi_finger_control"
+        output="screen"
+        args="$(arg side) $(arg ratio) $(arg fingers) --"/>
+</launch>
+
