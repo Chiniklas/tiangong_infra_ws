@@ -44,3 +44,34 @@ sudo apt-get install -y docker-compose-plugin
 
  ```
 >>>>>>> de6d8eb5d2413f9264c24e8c0b276e4c55b8a2bc
+
+
+
+# pull down this branch 
+```
+sudo apt update
+sudo apt install -y git git-lfs
+git lfs install
+*********
+git clone git@github.com:Chiniklas/tiangong_infra_ws.git
+cd tiangong_infra_ws
+git checkout tiangong_infra_ws_sim
+
+**********
+if you already clone this repo 
+cd tiangong_infra_ws
+git fetch origin
+git checkout tiangong_infra_ws_sim
+***********
+# only once 
+git lfs install
+
+# pull lfs 
+git lfs pull
+# verification 
+git lfs ls-files | grep -i '\.stl'
+file ws/tg2_ws/src/tg2_description/urdf/meshes/ankle_pitch_l_link.STL
+
+#  “Stereo lithography” or “Binary STL”，not ASCII 
+
+```
