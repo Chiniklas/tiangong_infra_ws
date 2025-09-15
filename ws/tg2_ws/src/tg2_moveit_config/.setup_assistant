@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: tg2_description
+    relative_path: urdf/tiangong2_EVT_V2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/humanoid.srdf
+  CONFIG:
+    author_name: sw
+    author_email: 1998287911ws@gmail.com
+    generated_timestamp: 1757883827

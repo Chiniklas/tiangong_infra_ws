@@ -1,2 +1,2 @@
-tg2_description
+tg2_description:tg2_moveit_config
 -DCATKIN_DEVEL_PREFIX=/tiangong_infra_ws/ws/tg2_ws/devel -DCMAKE_INSTALL_PREFIX=/tiangong_infra_ws/ws/tg2_ws/install -G Unix Makefiles

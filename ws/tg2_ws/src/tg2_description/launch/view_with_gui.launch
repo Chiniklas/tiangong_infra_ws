@@ -1,5 +1,5 @@
 <launch>
-    <param name="robot_description"   textfile="/tiangong_infra_ws/ws/tg2_ws/urdf/tiangong2_EVT_V2.urdf"/>
+    <param name="robot_description"   textfile="/tiangong_infra_ws/ws/tg2_ws/src/tg2_description/urdf/tiangong2_EVT_V2.urdf"/>
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
 
     <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" />

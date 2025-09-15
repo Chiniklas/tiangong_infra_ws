@@ -352,6 +352,12 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
 
+//Value Computed by CMake
+New_BINARY_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/build/tg2_moveit_config
+
+//Value Computed by CMake
+New_SOURCE_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/src/tg2_moveit_config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
@@ -393,6 +399,9 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
+
+//The directory containing a CMake configuration file for bodyctrl_msgs.
+bodyctrl_msgs_DIR:PATH=bodyctrl_msgs_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
@@ -496,6 +505,18 @@ tg2_description_BINARY_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/build/tg2_descrip
 
 //Value Computed by CMake
 tg2_description_SOURCE_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/src/tg2_description
+
+//Value Computed by CMake
+tg2_joint_gui_bridge_BINARY_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/build/tg2_joint_gui_bridge
+
+//Value Computed by CMake
+tg2_joint_gui_bridge_SOURCE_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/src/tg2_joint_gui_bridge
+
+//Value Computed by CMake
+tg2_moveit_config_BINARY_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/build/tg2_moveit_config
+
+//Value Computed by CMake
+tg2_moveit_config_SOURCE_DIR:STATIC=/tiangong_infra_ws/ws/tg2_ws/src/tg2_moveit_config
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/noetic/share/urdf/cmake
@@ -651,7 +672,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
