@@ -1,0 +1,53 @@
+<launch>
+ 
+  <arg name="pipeline" default="ompl"/>
+  <arg name="moveit_controller_manager" default="fake"/>
+  <arg name="fake_execution_type" default="interpolate"/>
+  <arg name="use_rviz" default="true"/>
+  <arg name="use_gui" default="false"/>
+  <arg name="debug" default="false"/>
+  <arg name="load_robot_description" default="true"/>
+  <arg name="db" default="false"/>
+  <arg name="db_path" default="$(find tg2_moveit_config)/default_warehouse_mongo_db"/>
+
+
+  <arg name="group_name" default="left_arm"/>
+  <arg name="src_frame" default="base"/>
+  <arg name="planner" default="ompl"/>
+  <arg name="xyz" default="[0.3, 0.2, 0.4]"/>
+  <arg name="rpy" default="[-1.57, 0.0, 1.57]"/>
+  <arg name="cartesian_step" default="0.02"/>
+  <arg name="planning_time" default="5.0"/>
+  <arg name="planning_attempts" default="50"/>
+  <arg name="marker_hold_sec" default="2.0"/>
+  <arg name="ompl_id" default=""/>
+  <arg name="run_point_demo" default="true"/>
+
+  
+  <include file="$(find tg2_moveit_config)/launch/demo.launch">
+    <arg name="pipeline" value="$(arg pipeline)"/>
+    <arg name="moveit_controller_manager" value="$(arg moveit_controller_manager)"/>
+    <arg name="fake_execution_type" value="$(arg fake_execution_type)"/>
+    <arg name="use_rviz" value="$(arg use_rviz)"/>
+    <arg name="use_gui" value="$(arg use_gui)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="load_robot_description" value="$(arg load_robot_description)"/>
+    <arg name="db" value="$(arg db)"/>
+    <arg name="db_path" value="$(arg db_path)"/>
+  </include>
+
+  <group if="$(arg run_point_demo)">
+    <node pkg="tg2_moveit_config" type="point_demo.py" name="point_demo" output="screen">
+      <param name="group_name" value="$(arg group_name)"/>
+      <param name="src_frame" value="$(arg src_frame)"/>
+      <param name="planner" value="$(arg planner)"/>
+      <param name="xyz" value="$(arg xyz)"/>
+      <param name="rpy" value="$(arg rpy)"/>
+      <param name="cartesian_step" value="$(arg cartesian_step)"/>
+      <param name="planning_time" value="$(arg planning_time)"/>
+      <param name="planning_attempts" value="$(arg planning_attempts)"/>
+      <param name="marker_hold_sec" value="$(arg marker_hold_sec)"/>
+      <param name="ompl_id" value="$(arg ompl_id)"/>
+    </node>
+  </group>
+</launch>
