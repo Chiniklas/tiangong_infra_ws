@@ -1,0 +1,39 @@
+<launch>
+  <node pkg="control_bridge" type="arm_bridge.py" name="arm_bridge" output="screen">
+    <!-- CSV 路径 -->
+    <param name="csv_path" value="/absolute/path/to/traj_csv.csv"/>
+
+    <!-- 直接向 SDK 的位置模式话题发布 -->
+    <param name="topic_out" value="/arm/set"/>
+
+    <!-- 若 CSV 有 time_from_start(s) 就按时间播放；否则用 rate_hz 匀速 -->
+    <param name="use_file_timing" value="true"/>
+    <param name="rate_hz" value="100.0"/>
+
+    <!-- CSV 的位置是否为“度”；若已是弧度就 false -->
+    <param name="input_in_degrees" value="false"/>
+
+    <!-- 当 CSV 未提供 *_vel / *_cur 时使用 -->
+    <param name="default_spd_rpm" value="60.0"/>
+    <param name="default_cur_A"   value="5.0"/>
+
+    <!-- 列名 → 电机ID（若表头本身是数字 ID 就不需要这个映射） -->
+    <rosparam param="joint_map">
+      shoulder_pitch_r_joint: 21
+      shoulder_roll_r_joint: 22
+      elbow_yaw_r_joint: 23
+      elbow_pitch_r_joint: 24
+      wrist_yaw_r_joint: 25
+      wrist_pitch_r_joint: 26
+      wrist_roll_r_joint: 27
+      # 左臂需要的话：
+      # shoulder_pitch_l_joint: 11
+      # shoulder_roll_l_joint: 12
+      # elbow_yaw_l_joint: 13
+      # elbow_pitch_l_joint: 14
+      # wrist_yaw_l_joint: 15
+      # wrist_pitch_l_joint: 16
+      # wrist_roll_l_joint: 17
+    </rosparam>
+  </node>
+</launch>
