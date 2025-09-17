@@ -1,4 +1,4 @@
-***Instructions:**
+**Instructions:**
 
 To build the docker image: currently Ubuntu20.04 + ROS noetic:
 
