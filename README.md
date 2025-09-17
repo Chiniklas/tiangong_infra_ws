@@ -6,7 +6,7 @@ step1: Build the image
   
   go to ./scripts, run **build.bash**
 
-<<<<<<< HEAD
+
 step2: Build the container
   
   go to ./scripts, run **run.bash**
@@ -19,8 +19,6 @@ Step4: sanity check
 
   now you should be able to run roscore, and run rviz
 =======
-step2:
-  build the container, go to ./scripts, run **run.bash**
 
 
 ### If running build.bash get the bug (docker: 'compose' is not a docker command.)
@@ -74,4 +72,43 @@ file ws/tg2_ws/src/tg2_description/urdf/meshes/ankle_pitch_l_link.STL
 
 #  “Stereo lithography” or “Binary STL”，not ASCII 
 
+```
+# Moveit config workspace 
+- prepare two terminal (check if the stl file inside the meshes is binare  )
+- both terminal should run following command 
+```
+  cd ws/tg2_ws
+  catkin_make
+  source devel/setup.bash
+```
+- you can run the following command in one of those terminal 
+```
+  roslaunch tg2_moveit_config demo.launch
+```
+![moveit_gui](images/moviet_gui.png)
+if you meet the error 
+[ERROR] [1758122609.998725603]: Unable to connect to move_group action server 'move_group' within allotted time (30s)
+
+### press the reset button in left under side until 
+
+[INFO] [1758122677.148997170]: MoveGroup context            initialization complete
+You can start planning now!
+
+- run the following command in other terminal
+```
+rosrun tg2_moveit_config point_demo.py _group_name:="right_arm" _planner:=ompl _xyz:=[0.3,-0.3,0.2] _rpy:=[3.14,1.607,0.0]
+rosrun tg2_moveit_config point_demo.py _group_name:="left_arm" _xyz=[0.4,0.4,0.4]
+
+```
+
+the robot arm will move to the target point _xyz:=[0.3,-0.3,0.2] and the last joint will rotate to _rpy:=[3.14,1.607,0.0] 
+- if you want to record the full trajctory 
+```
+rosrun tg2_moveit_config point_with_log.py   _group_name:="right_arm"   _planner:=ompl   _xyz:="[0.3, -0.3, 0.6]"   _rpy:="[0, 1,6, 0]" 
+```
+the traj will log in  
+### ws/tg2_ws/src/tg2_moveit_config/scripts/traj_csv.csv
+- replay 
+```
+rosrun tg2_moveit_config replay_csv.py   _group_name:=left_arm   _csv_path:=/tiangong_infra_ws/ws/tg2_ws/src/tg2_moveit_config/scripts/traj_csv.csv   _time_scale:=1.0   _align_to_current:=true
 ```
