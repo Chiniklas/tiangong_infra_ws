@@ -47,4 +47,4 @@ After your tests, it is very important to power down the robot and put it in a s
 1- if the robot is beeping after powering up with the light on the lower chest blinking red, it means the robot needs recharging. Don't leave it unwatched while charging and 3-4 hours is sufficient. If you need to continue testing, 2 hours charging is totally acceptable. **DO NOT LEAVE IT CHARGING OVERNIGHT!** You could always charge during the day which people are around.
 
 ![261c399327deb0ceeb0e4efbed178160](https://github.com/user-attachments/assets/b33706df-5575-47dd-a814-63d852c96890)
-
+ssh ubuntu 
