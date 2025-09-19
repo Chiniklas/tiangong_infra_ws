@@ -65,12 +65,14 @@ CMAKE_BINARY_DIR = /home/ubuntu/chi_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: hand_control/all
+all: control_bridge/all
 all: teach_and_replay/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: hand_control/preinstall
+preinstall: control_bridge/preinstall
 preinstall: teach_and_replay/preinstall
 .PHONY : preinstall
 
@@ -82,8 +84,33 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: gtest/clean
 clean: hand_control/clean
+clean: control_bridge/clean
 clean: teach_and_replay/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory control_bridge
+
+# Recursive "all" directory target.
+control_bridge/all:
+.PHONY : control_bridge/all
+
+# Recursive "preinstall" directory target.
+control_bridge/preinstall:
+.PHONY : control_bridge/preinstall
+
+# Recursive "clean" directory target.
+control_bridge/clean: control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+control_bridge/clean: control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : control_bridge/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -174,11 +201,6 @@ teach_and_replay/preinstall:
 .PHONY : teach_and_replay/preinstall
 
 # Recursive "clean" directory target.
-teach_and_replay/clean: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/clean
-teach_and_replay/clean: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/clean
-teach_and_replay/clean: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/clean
-teach_and_replay/clean: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/clean
-teach_and_replay/clean: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/clean
 teach_and_replay/clean: teach_and_replay/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
 teach_and_replay/clean: teach_and_replay/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 teach_and_replay/clean: teach_and_replay/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
@@ -817,134 +839,264 @@ hand_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 .PHONY : hand_control/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir
+# Target rules for target control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target bodyctrl_msgs_generate_messages_cpp"
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/all
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-bodyctrl_msgs_generate_messages_cpp: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_cpp
+sensor_msgs_generate_messages_cpp: control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # clean rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/clean
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/clean
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir
+# Target rules for target control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target bodyctrl_msgs_generate_messages_eus"
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/all
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-bodyctrl_msgs_generate_messages_eus: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_eus
+sensor_msgs_generate_messages_eus: control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : sensor_msgs_generate_messages_eus
 
 # clean rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/clean
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/clean
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir
+# Target rules for target control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target bodyctrl_msgs_generate_messages_lisp"
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/all
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-bodyctrl_msgs_generate_messages_lisp: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_lisp
+sensor_msgs_generate_messages_lisp: control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # clean rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/clean
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/clean
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir
+# Target rules for target control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target bodyctrl_msgs_generate_messages_nodejs"
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/all
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-bodyctrl_msgs_generate_messages_nodejs: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_nodejs
+sensor_msgs_generate_messages_nodejs: control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # clean rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/clean
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/clean
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir
+# Target rules for target control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target bodyctrl_msgs_generate_messages_py"
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/all
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-bodyctrl_msgs_generate_messages_py: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_py
+sensor_msgs_generate_messages_py: control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : sensor_msgs_generate_messages_py
 
 # clean rule for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/clean
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/clean
+control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : geometry_msgs_generate_messages_eus
+
+# clean rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/chi_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/chi_ws/build/CMakeFiles 0
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target teach_and_replay/CMakeFiles/std_srvs_generate_messages_cpp.dir

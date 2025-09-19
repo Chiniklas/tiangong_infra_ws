@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("hand_control")
+subdirs("control_bridge")
 subdirs("teach_and_replay")

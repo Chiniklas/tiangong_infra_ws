@@ -7,6 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/ubuntu/rosws/install_isolated/lib:/opt/ros/noetic/lib'
-export PKG_CONFIG_PATH='/home/ubuntu/rosws/install_isolated/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
+export CMAKE_PREFIX_PATH="/home/ubuntu/chi_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD='/home/ubuntu/chi_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/chi_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/ubuntu/chi_ws/src:$ROS_PACKAGE_PATH"

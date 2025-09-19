@@ -484,69 +484,134 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named bodyctrl_msgs_generate_messages_cpp
+# Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
-bodyctrl_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bodyctrl_msgs_generate_messages_cpp
-.PHONY : bodyctrl_msgs_generate_messages_cpp
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-bodyctrl_msgs_generate_messages_cpp/fast:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_cpp/fast
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named bodyctrl_msgs_generate_messages_eus
+# Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
-bodyctrl_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bodyctrl_msgs_generate_messages_eus
-.PHONY : bodyctrl_msgs_generate_messages_eus
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
 
 # fast build rule for target.
-bodyctrl_msgs_generate_messages_eus/fast:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_eus/fast
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named bodyctrl_msgs_generate_messages_lisp
+# Target rules for targets named sensor_msgs_generate_messages_lisp
 
 # Build rule for target.
-bodyctrl_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bodyctrl_msgs_generate_messages_lisp
-.PHONY : bodyctrl_msgs_generate_messages_lisp
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-bodyctrl_msgs_generate_messages_lisp/fast:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_lisp/fast
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named bodyctrl_msgs_generate_messages_nodejs
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
 
 # Build rule for target.
-bodyctrl_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bodyctrl_msgs_generate_messages_nodejs
-.PHONY : bodyctrl_msgs_generate_messages_nodejs
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-bodyctrl_msgs_generate_messages_nodejs/fast:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_nodejs/fast
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named bodyctrl_msgs_generate_messages_py
+# Target rules for targets named sensor_msgs_generate_messages_py
 
 # Build rule for target.
-bodyctrl_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bodyctrl_msgs_generate_messages_py
-.PHONY : bodyctrl_msgs_generate_messages_py
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
 
 # fast build rule for target.
-bodyctrl_msgs_generate_messages_py/fast:
-	$(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_py/fast
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_eus
+
+# Build rule for target.
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) $(MAKESILENT) -f control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make control_bridge/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_cpp
@@ -691,14 +756,14 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... bodyctrl_msgs_generate_messages_cpp"
-	@echo "... bodyctrl_msgs_generate_messages_eus"
-	@echo "... bodyctrl_msgs_generate_messages_lisp"
-	@echo "... bodyctrl_msgs_generate_messages_nodejs"
-	@echo "... bodyctrl_msgs_generate_messages_py"
 	@echo "... clean_test_results"
 	@echo "... download_extra_data"
 	@echo "... doxygen"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
@@ -710,6 +775,11 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"

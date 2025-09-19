@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/chi_ws/devel
+
+Name: control_bridge
+Description: Description of control_bridge
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

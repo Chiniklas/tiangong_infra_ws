@@ -1,10 +1,10 @@
 <launch>
   <node pkg="control_bridge" type="arm_bridge.py" name="arm_bridge" output="screen">
     <!-- CSV 路径 -->
-    <param name="csv_path" value="/absolute/path/to/traj_csv.csv"/>
+    <param name="csv_path" value="/home/ubuntu/chi_ws/traj_csv.csv"/>
 
     <!-- 直接向 SDK 的位置模式话题发布 -->
-    <param name="topic_out" value="/arm/set"/>
+    <param name="topic_out" value="/arm/cmd_pos"/>
 
     <!-- 若 CSV 有 time_from_start(s) 就按时间播放；否则用 rate_hz 匀速 -->
     <param name="use_file_timing" value="true"/>

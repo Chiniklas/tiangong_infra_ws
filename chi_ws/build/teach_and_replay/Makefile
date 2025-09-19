@@ -172,76 +172,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bodyctrl_msgs_generate_messages_cpp: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_cpp
-
-# fast build rule for target.
-bodyctrl_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_cpp.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-bodyctrl_msgs_generate_messages_eus: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_eus
-
-# fast build rule for target.
-bodyctrl_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_eus.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bodyctrl_msgs_generate_messages_lisp: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_lisp
-
-# fast build rule for target.
-bodyctrl_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_lisp.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bodyctrl_msgs_generate_messages_nodejs: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-bodyctrl_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_nodejs.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule
-.PHONY : teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bodyctrl_msgs_generate_messages_py: teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/rule
-.PHONY : bodyctrl_msgs_generate_messages_py
-
-# fast build rule for target.
-bodyctrl_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build.make teach_and_replay/CMakeFiles/bodyctrl_msgs_generate_messages_py.dir/build
-.PHONY : bodyctrl_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 teach_and_replay/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
 	cd /home/ubuntu/chi_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 teach_and_replay/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 .PHONY : teach_and_replay/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
@@ -394,11 +324,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... bodyctrl_msgs_generate_messages_cpp"
-	@echo "... bodyctrl_msgs_generate_messages_eus"
-	@echo "... bodyctrl_msgs_generate_messages_lisp"
-	@echo "... bodyctrl_msgs_generate_messages_nodejs"
-	@echo "... bodyctrl_msgs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
