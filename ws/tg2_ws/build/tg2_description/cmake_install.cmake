@@ -1,8 +1,8 @@
-# Install script for directory: /tiangong_infra_ws/ws/tg2_ws/src/tg2_description
+# Install script for directory: /tiangong_infra_ws/tg2_ws/src/tg2_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/tiangong_infra_ws/ws/tg2_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/tiangong_infra_ws/tg2_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/tiangong_infra_ws/ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/tiangong_infra_ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tg2_description/cmake" TYPE FILE FILES
-    "/tiangong_infra_ws/ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_descriptionConfig.cmake"
-    "/tiangong_infra_ws/ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_descriptionConfig-version.cmake"
+    "/tiangong_infra_ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_descriptionConfig.cmake"
+    "/tiangong_infra_ws/tg2_ws/build/tg2_description/catkin_generated/installspace/tg2_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tg2_description" TYPE FILE FILES "/tiangong_infra_ws/ws/tg2_ws/src/tg2_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tg2_description" TYPE FILE FILES "/tiangong_infra_ws/tg2_ws/src/tg2_description/package.xml")
 endif()
 

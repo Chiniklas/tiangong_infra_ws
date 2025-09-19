@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tiangong_infra_ws/ws/tg2_ws/src
+CMAKE_SOURCE_DIR = /tiangong_infra_ws/tg2_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tiangong_infra_ws/ws/tg2_ws/build
+CMAKE_BINARY_DIR = /tiangong_infra_ws/tg2_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_em
 .PHONY : tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /tiangong_infra_ws/ws/tg2_ws/build/tg2_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /tiangong_infra_ws/tg2_ws/build/tg2_moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /tiangong_infra_ws/ws/tg2_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tiangong_infra_ws/ws/tg2_ws/src /tiangong_infra_ws/ws/tg2_ws/src/tg2_moveit_config /tiangong_infra_ws/ws/tg2_ws/build /tiangong_infra_ws/ws/tg2_ws/build/tg2_moveit_config /tiangong_infra_ws/ws/tg2_ws/build/tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tiangong_infra_ws/tg2_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tiangong_infra_ws/tg2_ws/src /tiangong_infra_ws/tg2_ws/src/tg2_moveit_config /tiangong_infra_ws/tg2_ws/build /tiangong_infra_ws/tg2_ws/build/tg2_moveit_config /tiangong_infra_ws/tg2_ws/build/tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tg2_moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

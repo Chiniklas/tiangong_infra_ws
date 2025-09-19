@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tiangong_infra_ws/ws/tg2_ws/src
+CMAKE_SOURCE_DIR = /tiangong_infra_ws/tg2_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tiangong_infra_ws/ws/tg2_ws/build
+CMAKE_BINARY_DIR = /tiangong_infra_ws/tg2_ws/build
 
 # Utility rule file for roscpp_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build: roscpp_gen
 .PHONY : tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 
 tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	cd /tiangong_infra_ws/ws/tg2_ws/build/tg2_description && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /tiangong_infra_ws/tg2_ws/build/tg2_description && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend:
-	cd /tiangong_infra_ws/ws/tg2_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tiangong_infra_ws/ws/tg2_ws/src /tiangong_infra_ws/ws/tg2_ws/src/tg2_description /tiangong_infra_ws/ws/tg2_ws/build /tiangong_infra_ws/ws/tg2_ws/build/tg2_description /tiangong_infra_ws/ws/tg2_ws/build/tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tiangong_infra_ws/tg2_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tiangong_infra_ws/tg2_ws/src /tiangong_infra_ws/tg2_ws/src/tg2_description /tiangong_infra_ws/tg2_ws/build /tiangong_infra_ws/tg2_ws/build/tg2_description /tiangong_infra_ws/tg2_ws/build/tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tg2_description/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 

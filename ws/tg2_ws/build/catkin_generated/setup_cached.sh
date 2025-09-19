@@ -7,9 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/tiangong_infra_ws/ws/tg2_ws/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/tiangong_infra_ws/ws/tg2_ws/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/tiangong_infra_ws/ws/tg2_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD='/tiangong_infra_ws/ws/tg2_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/tiangong_infra_ws/ws/tg2_ws/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/tiangong_infra_ws/ws/tg2_ws/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH='/tiangong_infra_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu'
+export PKG_CONFIG_PATH='/tiangong_infra_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
+export PWD='/tiangong_infra_ws/tg2_ws/build'

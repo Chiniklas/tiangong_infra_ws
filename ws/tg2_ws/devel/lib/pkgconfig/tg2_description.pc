@@ -1,4 +1,4 @@
-prefix=/tiangong_infra_ws/ws/tg2_ws/devel
+prefix=/tiangong_infra_ws/tg2_ws/devel
 
 Name: tg2_description
 Description: Description of tg2_description

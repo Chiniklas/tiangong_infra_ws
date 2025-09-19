@@ -67,14 +67,14 @@ set(tg2_moveit_config_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(tg2_moveit_config_SOURCE_PREFIX /tiangong_infra_ws/ws/tg2_ws/src/tg2_moveit_config)
-  set(tg2_moveit_config_DEVEL_PREFIX /tiangong_infra_ws/ws/tg2_ws/devel)
+  set(tg2_moveit_config_SOURCE_PREFIX /tiangong_infra_ws/tg2_ws/src/tg2_moveit_config)
+  set(tg2_moveit_config_DEVEL_PREFIX /tiangong_infra_ws/tg2_ws/devel)
   set(tg2_moveit_config_INSTALL_PREFIX "")
   set(tg2_moveit_config_PREFIX ${tg2_moveit_config_DEVEL_PREFIX})
 else()
   set(tg2_moveit_config_SOURCE_PREFIX "")
   set(tg2_moveit_config_DEVEL_PREFIX "")
-  set(tg2_moveit_config_INSTALL_PREFIX /tiangong_infra_ws/ws/tg2_ws/install)
+  set(tg2_moveit_config_INSTALL_PREFIX /tiangong_infra_ws/tg2_ws/install)
   set(tg2_moveit_config_PREFIX ${tg2_moveit_config_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /tiangong_infra_ws/ws/tg2_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /tiangong_infra_ws/tg2_ws/install/lib;/tiangong_infra_ws/tg2_ws/devel/lib;/tiangong_infra_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
